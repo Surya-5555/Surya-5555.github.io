@@ -4,269 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiran 2026 - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: rgba(0, 0, 0, 0.8);
-            animation: fadeIn 2s ease-in-out;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7, #d4fc79);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            animation: logoPulse 3s infinite alternate;
-        }
-        @keyframes logoPulse {
-            0% {
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            }
-            50% {
-                text-shadow: 4px 4px 15px rgba(255, 255, 255, 0.6);
-            }
-            100% {
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            }
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-        .nav-links li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-        }
-        .nav-links li a:hover {
-            color: #ffcc00;
-            font-size: 1.2rem;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-        }
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            animation: slideIn 2s ease-in-out;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            margin: 0;
-            animation: textPopUp 2s ease-in-out;
-        }
-        .year {
-            color: #ffcc00;
-        }
-        .tagline, .event-details, .event-list, .dates {
-            font-size: 1.5rem;
-            margin-top: 0.5rem;
-            animation: fadeInUp 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes textPopUp {
-            from {
-                transform: scale(0);
-            }
-            to {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-.timer {
-    background: linear-gradient(135deg, #1a032a, #310f4c);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* Neon Glow Animation */
-@keyframes glow {
-    0% { box-shadow: 0 0 5px #ff007f; }
-    50% { box-shadow: 0 0 20px #ff007f; }
-    100% { box-shadow: 0 0 5px #ff007f; }
-}
-
-.countdown-container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    animation: glow 2s infinite alternate;
-}
-
-.countdown-label {
-    color: #ff007f;
-    letter-spacing: 3px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-h2 {
-    margin: 10px 0 20px;
-    font-size: 26px;
-    font-weight: 600;
-}
-
-.countdown-timer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-
-
-.time-box:hover {
-    transform: scale(1.1);
-}
-
-.time-box {
-    background: linear-gradient(135deg, #b5129a, #7805ff);
-    padding: 25px;
-    border-radius: 20px;
-    width: 100px; /* Handles 3-digit numbers */
-    height: 100px; /* Ensures vertical centering */
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
-    animation: glow 2s infinite alternate;
-    transition: transform 0.3s ease-in-out;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.time-box span {
-    font-size: 36px;
-    font-weight: bold;
-    display: block;
-}
-
-.time-box small {
-    font-size: 14px;
-    font-weight: 300;
-}
-
-
-.separator {
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-}
-
-/* Register Button */
-.register-btn {
-    display: inline-block;
-    margin-top: 25px;
-    background: linear-gradient(90deg, #ff007f, #ff0055);
-    color: white;
-    text-decoration: none;
-    padding: 14px 25px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
-}
-
-.register-btn:hover {
-    transform: scale(1.1);
-    background: linear-gradient(90deg, #ff0055, #ff007f);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .countdown-timer {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .time-box {
-        font-size: 2rem;
-        width: 80px; /* Adjust for smaller screens */
-        padding: 20px;
-    }
-
-    .time-box span {
-        font-size: 28px;
-        min-width: 80px;
-    }
-
-    .separator {
-        font-size: 24px;
-    }
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <header>
@@ -323,7 +62,164 @@ h2 {
             <a href="#" class="register-btn">Register Now</a>
         </div>
     </section>
-    
+    <section class="events">
+        <div class="event-container">
+            <div class="event-box">
+                <div class="img-wrapper">
+                    <img src="assest/hackkkk.jpg" alt="Hackathons">
+                </div>
+                <p>Hackathons</p>
+            </div>
+            <div class="event-box">
+                <div class="img-wrapper">
+                    <img src="assest/image-2.jpg" alt="Workshops">
+                </div>
+                <p>Workshops</p>
+            </div>
+            <div class="event-box">
+                <div class="img-wrapper">
+                    <img src="assest/image-3.jpg" alt="Master Class">
+                </div>
+                <p>Master Class</p>
+            </div>
+            <div class="event-box">
+                <div class="img-wrapper">
+                    <img src="assest/image-4.jpg" alt="Project Expo">
+                </div>
+                <p>Project Expo</p>
+            </div>
+            <div class="event-box">
+                <div class="img-wrapper">
+                    <img src="assest/image-5.jpg" alt="Paper Presentation">
+                </div>
+                <p>Paper Presentation</p>
+            </div>
+            <div class="event-box">
+                <div class="img-wrapper">
+                    <img src="assest/image-6.jpg" alt="Tech Events">
+                </div>
+                <p>Tech Events</p>
+            </div>
+            <div class="event-box">
+                <div class="img-wrapper">
+                    <img src="assest/image-7.jpg" alt="Non-Tech Events">
+                </div>
+                <p>Non-Tech Events</p>
+            </div>
+            <div class="event-box">
+                <div class="img-wrapper">
+                    <img src="assest/image-8.jpg" alt="Cultural Contests">
+                </div>
+                <p>Cultural Contests</p>
+            </div>
+        </div>
+    </section>
+  <section class="Hackathon">
+
+    <div class="event-container">
+        <div class="event-card">
+            <img src="assest/img9.webp" alt="Designathon">
+            <div class="event-info">
+                <h3>Designathon</h3>
+                <p>Design the future of engineering with creative solutions and ideas.</p>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="assest/img10.webp" alt="Blockathon">
+            <div class="event-info">
+                <h3>Blockathon</h3>
+                <p>Innovate with blockchain technology and decentralized applications.</p>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="assest/img11.webp" alt="Creatathon">
+            <div class="event-info">
+                <h3>Creatathon</h3>
+                <p>Build IoT solutions to create a smarter and connected world.</p>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="assest/img12.webp" alt="CTF Quest">
+            <div class="event-info">
+                <h3>CTF Quest</h3>
+                <p>Decode, hack, and innovate with exciting cybersecurity challenges.</p>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="assest/img13.webp" alt="Codeathon">
+            <div class="event-info">
+                <h3>Codeathon</h3>
+                <p>Develop sustainable solutions for a better future.</p>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="assest/img14.webp" alt="AI-Innovate">
+            <div class="event-info">
+                <h3>AI-Innovate</h3>
+                <p>Explore AI innovations for a smarter tomorrow.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="tags">
+        <div class="tag">20 FEB</div>
+        <div class="tag">21 FEB</div>
+        <div class="tag">22 FEB</div>
+        <div class="tag">AI-DS&ML</div>
+        <div class="tag">CSE</div>
+        <div class="tag">IT</div>
+        <div class="tag">ECE</div>
+        <div class="tag">MECH</div>
+        <div class="tag">Tech Fest</div>
+        <div class="tag">Cultural Contests</div>
+        <div class="tag">Spotlight Events</div>
+    </div>
+</section>
+<section class="pricing-section">
+    <h2 class="pricing-title">TICKET PRICING</h2>
+    <h1 class="event-title">Event Pass & Tickets</h1>
+
+    <div class="pricing-container">
+        <div class="pricing-card">
+            <span class="pass-type one-day">One Day Pass</span>
+            <h3>Rs. 300</h3>
+            <p>For one Person Ticket</p>
+            <ul>
+                <li>✅ Entry to all events - Spotlight events, Workshops, Contests, and Mega Celebrity shows scheduled on the chosen day.</li>
+                <li>✅ Veg/Non-Veg Lunch Included on the chosen day.</li>
+            </ul>
+            <button class="buy-btn">BUY YOUR PASS</button>
+        </div>
+
+        <div class="pricing-card">
+            <span class="pass-type two-day">Premium Pass (Two Days)</span>
+            <h3>Rs. 500</h3>
+            <p>For one Person Ticket</p>
+            <ul>
+                <li>✅ Entry to all events - Spotlight events, Workshops, Contests, and Mega Celebrity shows scheduled on the chosen two days.</li>
+                <li>✅ Veg/Non-Veg Lunch Included on the chosen two days.</li>
+            </ul>
+            <button class="buy-btn">BUY YOUR PASS</button>
+        </div>
+
+        <div class="pricing-card">
+            <span class="pass-type three-day">Elite Pass (Three Days)</span>
+            <h3>Rs. 750</h3>
+            <p>For one Person Ticket</p>
+            <ul>
+                <li>✅ Entry to all events - Spotlight events, Workshops, Contests, and Mega Celebrity shows scheduled on all three days.</li>
+                <li>✅ Veg/Non-Veg Lunch Included all three days.</li>
+            </ul>
+            <button class="buy-btn">BUY YOUR PASS</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<button id="scrollTopBtn">⬆</button>
 
     <script src="script.js"></script>
 </body>
